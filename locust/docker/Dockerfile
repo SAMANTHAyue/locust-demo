@@ -1,5 +1,5 @@
 # Start with a base Python 3.7.0 image
-FROM python:3.7.0
+FROM python:3.7.2
 
 # Add the external tasks directory into /tasks
 WORKDIR /src
@@ -17,4 +17,4 @@ EXPOSE 5557 5558 8089
 RUN chmod 755 run.sh
 
 # Start Locust using LOCUS_OPTS environment variable
-CMD ["bash", "run.sh"]
+ENTRYPOINT ["run.sh"]
