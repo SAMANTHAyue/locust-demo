@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: locust
-          image: asia.gcr.io/<PROJECT_ID>/locust:latest
+          image: asia.gcr.io/machine-learning-project-101/locust:latest
           imagePullPolicy: Always
           env:
             - name: LOCUST_MODE
@@ -29,7 +29,7 @@ spec:
             - name: LOCUST_LOG_LEVEL
               value: DEBUG
             - name: LOCUST_TARGET_HOST
-              value: https://<PROJECT_ID>.appspot.com
+              value: https://machine-learning-project-101.appspot.com
           ports:
             - name: loc-master-web
               containerPort: 8089
@@ -63,7 +63,7 @@ spec:
     spec:
       containers:
         - name: locust
-          image: asia.gcr.io/<PROJECT_ID>/locust:latest
+          image: asia.gcr.io/machine-learning-project-101/locust:latest
           imagePullPolicy: Always
           env:
             - name: LOCUST_MODE
@@ -73,4 +73,4 @@ spec:
             - name: LOCUST_LOG_LEVEL
               value: DEBUG
             - name: LOCUST_TARGET_HOST
-              value: https://<PROJECT_ID>.appspot.com
+              value: https://machine-learning-project-101.appspot.com
